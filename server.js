@@ -16,13 +16,13 @@ app.use(express.json());
 app.use(express.static("public"));
 
 require("./routes/html-routes")(app);
-// require("./routes/api-routes")(app);
+require("./routes/api-routes")(app);
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workoutdb", {
   useNewUrlParser: true,
 });
 
-//need api routes for html pages
+
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);

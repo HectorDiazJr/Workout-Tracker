@@ -27,5 +27,4 @@ const ResistanceSchema = new Schema({
         {
         type: Number
         },
-
 }),
